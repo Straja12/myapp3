@@ -1,0 +1,23 @@
+
+<h1>Edit atribute</h1>
+ 
+<%= form_for(@atribute) do |f| %>
+ 
+  <p>
+    <%= f.label :stat %><br>
+    <%= f.text_field :stat %>
+  </p>
+ 
+ 
+  <p>
+    <%= f.label :value %><br>
+    <%= f.text_field :value %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>
+ 
+

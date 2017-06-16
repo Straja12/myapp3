@@ -21,10 +21,11 @@ class CharactersController < ApplicationController
 	end
 
 	def destroy
+
+		puts "entered character controller for destroy"
 		@character = Character.find(params[:id])
 
-
-		#if was false for things like 5==5 so I had 2 convert both 2 string
+		#if was false for things like 5==5 so I had to convert both to string
 		prom = "#{@character.user_id}"
 		prom1 = "#{current_user.id}"
 		puts "TESTING for trenutni user #{current_user.id}"
@@ -41,6 +42,8 @@ class CharactersController < ApplicationController
 		
 		redirect_to characters_path 
 	end
+
+
 
 
 
