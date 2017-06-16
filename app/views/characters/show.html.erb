@@ -1,29 +1,44 @@
-<p>
-  <strong>Title:</strong>
-  <%= @character.name %>
-</p>
 
 
-<h2>Atributes</h2>
+
+<div class="container theme-showcase" role="main">
+<div class="panel panel-info">
+
+
+<h2>Atributes for <%= @character.name %></h2>
+<table class="table">
+    <tr> 
+      <td> Atribute: </td>
+      <td> Value: </td>
+      <td> </td>
+    </tr>
+
 <% @character.atributes.each do |atribute| %>
-  <p>
-    <strong>Atribute:</strong>
-    <%= atribute.stat %>
-  </p>
- 
-  <p>
-    <strong>Value:</strong>
-    <%= atribute.value %>
-  </p>
+  
 
+   <tr>
+    <td>  <%= atribute.stat %> </td>
+  
+ 
+  <td> <%= atribute.value %> </td>
+  
+  <td>
    <%= link_to 'Destroy attribute', [atribute.character, atribute],
                method: :delete,
                data: { confirm: 'Are you sure?' } %>
+  </td>
+  </tr>
 <% end %>
 
+</table>
 
 <h2>Add a atribute:</h2>
 <%= render 'atributes/form' %>
 
 
+
+
 <%= link_to 'Back', characters_path %>
+
+</div>
+</div>

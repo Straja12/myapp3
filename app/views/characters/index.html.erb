@@ -1,7 +1,11 @@
 <h1>Listing characters</h1>
  
  <hr />
-<table>
+
+<div class="container theme-showcase" role="main">
+<div class="panel panel-info">
+
+<table class="table">
   <tr>
     <th>Title</th>
     <th>Atributes</th>
@@ -20,8 +24,10 @@
 <hr />
 
 <%= paginate @characters %>
-<%= page_entries_info @characters %>
+<%= page_entries_info @characters %> <br>
 
 
 
 <%= link_to 'New character', new_character_path %>
+</div>
+</div>
