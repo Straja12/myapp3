@@ -22,7 +22,7 @@
  
   <td> <%= atribute.value %> </td>
   
-  <td><%= link_to 'Edit',edit_character_atribute_path(atribute.character ,atribute) %></td>
+  <td><%= link_to 'Edit',[:edit, atribute.character ,atribute ]%></td>
   <td>
    <%= link_to 'Destroy attribute', [atribute.character, atribute],
                method: :delete,

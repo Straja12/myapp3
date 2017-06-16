@@ -9,8 +9,17 @@ class AtributesController < ApplicationController
 
 	end
 
+	 def update
+	 	puts "entered atribute controller for update"
+	  @character = Character.find(params[:character_id])
+      @atribute  = @character.atributes.find(params[:id])
+
+ 	  @atribute.update(atribute_params)
+ 	  redirect_to character_path(@character)
+	end
 
 	def create
+		puts "entered atribute controller for create"
 		@character = Character.find(params[:character_id])
 		@atribute = @character.atributes.create(atribute_params)
 		redirect_to character_path(@character)
@@ -25,13 +34,7 @@ class AtributesController < ApplicationController
     	redirect_to character_path(@character)
  	 end
 
- 	 def update
-	  @character = Character.find(params[:id])
-      @atribute  = @character.atributes.find(params[:id])
-
- 	  @atribute.update(atribute_params)
- 	  redirect_to character_path(@character)
-	end
+ 	
 
 
 	private
