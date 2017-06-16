@@ -1,0 +1,16 @@
+<%= form_for([@character, @character.atributes.build]) do |f| %>
+	
+	<p>
+	<%= f.label :stat %> <br>
+	<%= f.text_field :stat %>
+	</p>
+	<p>
+	   <%= f.label :value %> <br>
+	   <%= f.text_field :value %>
+
+	</p>
+ <p>
+
+	  <%= f.submit %>
+  </p>
+<% end %>

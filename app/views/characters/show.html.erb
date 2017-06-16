@@ -1,0 +1,29 @@
+<p>
+  <strong>Title:</strong>
+  <%= @character.name %>
+</p>
+
+
+<h2>Atributes</h2>
+<% @character.atributes.each do |atribute| %>
+  <p>
+    <strong>Atribute:</strong>
+    <%= atribute.stat %>
+  </p>
+ 
+  <p>
+    <strong>Value:</strong>
+    <%= atribute.value %>
+  </p>
+
+   <%= link_to 'Destroy attribute', [atribute.character, atribute],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+<% end %>
+
+
+<h2>Add a atribute:</h2>
+<%= render 'atributes/form' %>
+
+
+<%= link_to 'Back', characters_path %>

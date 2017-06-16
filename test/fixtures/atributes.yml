@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stat: MyString
+  value: 1
+  character: one
+
+two:
+  stat: MyString
+  value: 1
+  character: two
